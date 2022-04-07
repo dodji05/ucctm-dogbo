@@ -3,16 +3,19 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Foire Jinukun </title>
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="description" content=""/>
+    <title> UCCTM-Dogbo {% block titre %} {% endblock %}</title>
+        {% block meta %}
+        <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="description" content="L’UCCTM-Dogbo veut appuyer les coopératives membres à accroitre leur pouvoir économique. "/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta property="og:title" content=""/>
+    <meta property="og:title" content="UNION COMMUNALE DES COOPERATIVES DE TRANSFORMATRICES DE MANIOC DE DOGBO"/>
     <meta property="og:type" content=""/>
     <meta property="og:url" content=""/>
     <meta property="og:image" content=""/>
+        {% endblock %}
+   
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/imgs/theme/favicon.png') }}"/>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/imgs/theme/favicon.jpg') }}"/>
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/animate.min.css') }}"/>
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}"/>
@@ -33,7 +36,7 @@
         <div class="container">
             <div class="header-wrap">
                 <div class="logo logo-width-1">
-                    <a href="{{ path('app_accueil') }}"><img src="{{ asset('assets/imgs/theme/logo-jinukun.png') }}"
+                    <a href="{{ path('app_accueil') }}"><img src="{{ asset('assets/imgs/theme/logo-UCCTM-DOGBO.png') }}"
                                                              alt="logo"></a>
                 </div>
                 <div class="header-right">
@@ -119,13 +122,13 @@
                                     </div>
                                 </div> #}
                             <div class="header-action-icon-2">
-                                <a href="{{ path('app_login') }}">
+                               {# <a href="{{ path('app_login') }}">
                                     <img class="svgInject" alt="Nest" src="{{ asset('assets/imgs/theme/icons/icon-user.svg') }}">
                                 </a>
-                                <a href="{{ path('app_login') }}"><span class="lable">Se connecter</span></a>
+                                 <a href="{{ path('app_login') }}"><span class="lable">Se connecter</span></a> #}
                             </div>
                             <div class="header-action-icon-2">
-                                <a href="{{ path('app_register') }}" class="animate__animated animate__bounce"><button class="btn ml-0" style="font-size: 0.5em">Prendre un stand</button></a>
+                                <a href="{{ path('app_login') }}" class="animate__animated animate__bounce"><button class="btn ml-0" style="font-size: 0.5em">Se connecter</button></a>
                                 {# <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
                                         <ul>
                                             <li>
@@ -627,51 +630,42 @@
         <div class="container pt-15 pb-20">
             <div class="row">
                 <div class="footer-link-widget col">
-                    <h4 class="widget-title">Jinukun</h4>
+                    <h4 class="widget-title">UCCTM DOGBO</h4>
                     <ul class="footer-list mb-sm-5 mb-md-0">
-                        <li><a href="#">Qui sommes-nous?</a></li>
-                        <li><a href="#">Informations de livraison</a></li>
-                        <li><a href="#">Politique de confidentialité</a></li>
-                        <li><a href="#">Conditions Générale d'utilisation</a></li>
+                        <li>Email : contac@ucctmdogbo.bj </li>
+                        <li>Téléphone : +229 00 00 00 00</li>
+                        <li>Adresse : Bénin/Mono/Lokossa/Dogbo </li>
+                        <li>BP : 00 </li>
                         <li><a href="#">Contact</a></li>
-                        <li><a href="#">Carrières</a></li>
+                       
                     </ul>
                 </div>
                 <div class="footer-link-widget col">
-                    <h4 class="widget-title">Compte</h4>
+                    <h4 class="widget-title">Acteurs</h4>
                     <ul class="footer-list mb-sm-5 mb-md-0">
-                        <li><a href="#">S'identifier</a></li>
-                        <li><a href="#">Voir le panier</a></li>
-                        <li><a href="#">Ma liste de souhaits</a></li>
-                        <li><a href="#">Suivre ma commande</a></li>
-                        <li><a href="#">Les détails d'expédition</a></li>
-                        <li><a href="#">Comparer les produits</a></li>
+                        <li><a href="#">Nos Producteurs</a></li>
+                        <li><a href="#">Nos Transformatrices</a></li>
+                       
                     </ul>
                 </div>
                 <div class="footer-link-widget col">
-                    <h4 class="widget-title">Entreprise</h4>
+                    <h4 class="widget-title">Documentation</h4>
                     <ul class="footer-list mb-sm-5 mb-md-0">
-                        <li><a href="#">Devenez vendeur</a></li>
-                        <li><a href="#">Entreprise agricole</a></li>
+                        <li><a href="#">Production du gari </a></li>
+                        <li><a href="#">Production du tapioca </a></li>
                         <li><a href="#">Carrières à la ferme</a></li>
-                        <li><a href="#">Nos fournisseurs</a></li>
-                        <li><a href="#">Accessibilité</a></li>
-                        <li><a href="#">Promotions</a></li>
+                        <li><a href="#">Production de la farine de Manioc</a></li>
+                        
                     </ul>
                 </div>
                 <div class="footer-link-widget col">
-                    <h4 class="widget-title">Populaire</h4>
+                    <h4 class="widget-title">Demandes</h4>
                     <ul class="footer-list mb-sm-5 mb-md-0">
-                        <li><a href="#">Milk &amp; Flavoured Milk</a></li>
-                        <li><a href="#">Butter and Margarine</a></li>
-                        <li><a href="#">Eggs Substitutes</a></li>
-                        <li><a href="#">Marmalades</a></li>
-                        <li><a href="#">Sour Cream and Dips</a></li>
-                        <li><a href="#">Tea &amp; Kombucha</a></li>
-                        <li><a href="#">Cheese</a></li>
+                        <li><a href="#">Faire une demande </a></li>
+                        
                     </ul>
                 </div>
-                <div class="footer-link-widget widget-install-app col">
+                {# <div class="footer-link-widget widget-install-app col">
                     <h4 class="widget-title">Installer l'application</h4>
                     <p class="wow fadeIn animated animated" style="visibility: visible;">Depuis App Store ou Google
                         Play</p>
@@ -686,7 +680,7 @@
                     <img class="wow fadeIn animated animated"
                          src="{{ asset('assets/imgs/theme/Paiement.png') }}" alt=""
                          style="visibility: visible;">
-                </div>
+                </div> #}
             </div>
         </div>
     </section>
@@ -696,8 +690,8 @@
                 <div class="footer-bottom"></div>
             </div>
             <div class="col-xl-4 col-lg-6 col-md-6">
-                <p class="font-sm mb-0">©  <strong class="text-brand">Foire </strong> - Jinukun <br>Tout droit
-                    reservé</p>
+                <p class="font-sm mb-0">©  <strong class="text-brand"> 2017–2020  </strong> UCCTM DOGBO <br>Tous droits
+                    reservés</p>
             </div>
             <div class="col-xl-4 col-lg-6 text-center d-none d-xl-block">
 
@@ -705,11 +699,11 @@
             <div class="col-xl-4 col-lg-6 col-md-6 text-end d-none d-md-block">
                 <div class="mobile-social-icon">
                     <h6>Suivez-nous</h6>
-                    <a href="https://web.facebook.com/jinukun"><img src="assets/imgs/theme/icons/icon-facebook-white.svg" alt=""></a>
-                    <a href="https://twitter.com/Jinukun_com"><img src="assets/imgs/theme/icons/icon-twitter-white.svg" alt=""></a>
-                    <a href="https://www.instagram.com/jinukunstore"><img src="assets/imgs/theme/icons/icon-instagram-white.svg" alt=""></a>
-                    <a href="https://www.youtube.com/channel/UC-6vBEqLE0XLGv1nCxuoUUA"><img src="assets/imgs/theme/icons/icon-youtube-white.svg" alt=""></a>
-                    <a href="https://www.linkedin.com/company/jinukun-store/"><img src="{{ asset('assets/imgs/theme/icons/social-linkedin.svg') }}" alt=""></a>
+                    <a href="#"><img src="assets/imgs/theme/icons/icon-facebook-white.svg" alt=""></a>
+                    <a href="#"><img src="assets/imgs/theme/icons/icon-twitter-white.svg" alt=""></a>
+                    <a href="#"><img src="assets/imgs/theme/icons/icon-instagram-white.svg" alt=""></a>
+                    <a href="#"><img src="assets/imgs/theme/icons/icon-youtube-white.svg" alt=""></a>
+                    <a href="#"><img src="{{ asset('assets/imgs/theme/icons/social-linkedin.svg') }}" alt=""></a>
                 </div>
 
             </div>
