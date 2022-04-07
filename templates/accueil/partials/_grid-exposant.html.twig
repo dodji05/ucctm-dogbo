@@ -1,0 +1,122 @@
+<div class="page-content pt-50">
+    <div class="container">
+        <div class="archive-header-2 text-center">
+            <h1 class="display-2 mb-50">NOS EXPOXANTS </h1>
+            {# <div class="row">
+                <div class="col-lg-5 mx-auto">
+                    <div class="sidebar-widget-2 widget_search mb-50">
+                        <div class="search-form">
+                            <form action="#">
+                                <input type="text" placeholder="Search vendors (by name or ID)...">
+                                <button type="submit"><i class="fi-rs-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div> #}
+        </div>
+        <div class="row mb-50">
+            <div class="col-12 col-lg-8 mx-auto">
+                <div class="shop-product-fillter">
+                    <div class="totall-product">
+                        <p><strong class="text-brand">{{ exposants|length }}</strong>
+                            exposant{% if exposants|length > 1 %}s{% endif %}</p>
+                    </div>
+                    <div class="sort-by-product-area">
+                        <div class="sort-by-cover mr-10">
+                            <div class="sort-by-product-wrap">
+                                <div class="sort-by">
+                                    <span><i class="fi-rs-apps"></i>Afficher:</span>
+                                </div>
+                                <div class="sort-by-dropdown-wrap">
+                                    <span> 50 <i class="fi-rs-angle-small-down"></i></span>
+                                </div>
+                            </div>
+                            <div class="sort-by-dropdown">
+                                <ul>
+                                    <li><a class="active" href="#">50</a></li>
+                                    <li><a href="#">100</a></li>
+                                    <li><a href="#">150</a></li>
+                                    <li><a href="#">200</a></li>
+                                    <li><a href="#">All</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sort-by-cover">
+                            <div class="sort-by-product-wrap">
+                                <div class="sort-by">
+                                    <span><i class="fi-rs-apps-sort"></i>Trier par:</span>
+                                </div>
+                                <div class="sort-by-dropdown-wrap">
+                                    <span> Catégories <i class="fi-rs-angle-small-down"></i></span>
+                                </div>
+                            </div>
+                            <div class="sort-by-dropdown">
+                                <ul>
+                                    <li><a class="active" href="#">Mall</a></li>
+                                    <li><a href="#">Featured</a></li>
+                                    <li><a href="#">Preferred</a></li>
+                                    <li><a href="#">Total items</a></li>
+                                    <li><a href="#">Avg. Rating</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row vendor-grid">
+            {% for exposant in exposants %}
+                <div class="col-lg-3 col-md-6 col-12 col-sm-6">
+                    <div class="vendor-wrap mb-40">
+                        <div class="vendor-img-action-wrap">
+                            <div class="vendor-img">
+                                <a href="{{ path('app_show_exposant', {'slug': exposant.slug}) }}">
+                                    <img class="default-img" src="{{ asset('uploads/' ~ exposant.logo) }}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="vendor-content-wrap">
+                            <div class="d-flex justify-content-between align-items-end mb-30">
+                                <div>
+                                    <div class="product-category">
+                                        <span class="text-muted">Since 2012</span>
+                                    </div>
+                                    <h4 class="mb-5"><a
+                                                href="{{ path('app_show_exposant', {'slug': exposant.slug}) }}">{{ exposant.nom }}</a>
+                                    </h4>
+
+                                    <div class="product-rate-cover">
+                                        <div class="product-rate d-inline-block">
+                                            <div class="product-rating" style="width: 90%"></div>
+                                        </div>
+                                        <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                    </div>
+                                </div>
+
+                                <div class="mb-10">
+                                    <span class="font-small total-product text-center">{{ exposant.produits|length }}</span>
+                                </div>
+                            </div>
+
+                            <div class="vendor-info mb-30">
+                                <ul class="contact-infor text-muted">
+                                    <li><img src="assets/imgs/theme/icons/icon-location.svg"
+                                             alt=""><strong>Addresse: </strong> <span>{{ exposant.localisation }}</span>
+                                    </li>
+                                    <li><img src="assets/imgs/theme/icons/icon-contact.svg"
+                                             alt=""><strong>Appel:</strong>
+                                        <span>{{ exposant.contact }}</span></li>
+                                </ul>
+                            </div>
+                            <a href="{{ path('app_show_exposant', {'slug': exposant.slug}) }}" class="btn btn-xs">Visiter
+                                le stand <i
+                                        class="fi-rs-arrow-small-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
